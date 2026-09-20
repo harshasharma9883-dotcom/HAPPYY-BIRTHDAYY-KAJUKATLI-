@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OYE KAJUKATLI 🩷</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="hearts"></div>
+  <main id="app">
+
+    <section class="page active" id="page1">
+      <div class="card password-card">
+        <span class="eyebrow">01 — SECRET ENTRY</span>
+        <h1>OYE KAJUKATLI.. 👀</h1>
+        <p>Aaj tumhare liye kuch banaya hai…<br>but pehle ek chhota sa rule hai. 🤭</p>
+        <div class="hint">HINT: KAJUKATLI'S BIRTHDAY!! 🎀</div>
+        <input id="password" type="text" inputmode="numeric" placeholder="DD/MM" maxlength="5">
+        <button onclick="checkPassword()">ENTER ✨</button>
+        <p id="wrong" class="error"></p>
+      </div>
+    </section>
+
+    <section class="page" id="page2">
+      <div class="card">
+        <span class="eyebrow">02 — YAYAYAYA</span>
+        <h1>CORRECT PASSWORD!! 😋</h1>
+        <p>Iska matlab hai ki tum <b>BIRTHDAY GIRL</b> hee ho!!😋<br>Chlo ab aage dekho surprise abhi baaki hai 🤭</p>
+        <button onclick="nextPage()">CHALO DEKHA JAAYE😭🌷</button>
+      </div>
+    </section>
+
+    <section class="page" id="page3">
+      <div class="card">
+        <span class="eyebrow">03 — SECRET ENTRY</span>
+        <h1>OYE KAJUKATLI… 👀</h1>
+        <p>Aaj tumhare liye kuch banaya hai…<br>par pehle ek chhota sa rule hai.</p>
+        <button onclick="nextPage()">CHALO DEKHTI HUU😭🎀</button>
+      </div>
+    </section>
+
+    <section class="page" id="page4">
+      <div class="card cinematic">
+        <span class="eyebrow">04 — WAIT…</span>
+        <h1>Ruko… ruko…</h1>
+        <p>itni jaldi bhi kya hai? 😭</p>
+        <p class="big-soft">Surprise abhi baaki hai…</p>
+        <button onclick="nextPage()">SURPRISE DEKHO</button>
+      </div>
+    </section>
+
+    <section class="page wide" id="page5">
+      <div class="section-head">
+        <span class="eyebrow">05 — SURPRISE!!! 😋🤭</span>
+        <h1>KAJUKATLI KI PHOTOS 🩷</h1>
+        <p>Ek ek karke dekho madam… gallery jaldi skip nahi karni. 😭🤭</p>
+      </div>
+      <div class="gallery">
+        <article class="photo-card"><div class="photo-placeholder" data-photo="1" style="background-image:url('photo1.jpg');background-size:cover;background-position:center;color:transparent;">PHOTO 01</div><p>BIRTHDAY GIRL KA PURANA VERSION🤭</p></article>
+        <article class="photo-card"><div class="photo-placeholder" data-photo="2" style="background-image:url('photo2.jpg');background-size:cover;background-position:center;color:transparent;">PHOTO 02</div><p>SIMPLE SI PHOTO PAR VIBE PURI 10/10😏👉🏻👈🏻</p></article>
+        <article class="photo-card"><div class="photo-placeholder" data-photo="3" style="background-image:url('photo3.jpg');background-size:cover;background-position:center;color:transparent;">PHOTO 03</div><p>KAJUKATLI SPOTTED BEING CHTIEE AGAIN 🧿🤭</p></article>
+        <article class="photo-card"><div class="photo-placeholder" data-photo="4" style="background-image:url('photo4.jpg');background-size:cover;background-position:center;color:transparent;">PHOTO 04</div><p>YEH SMILE HUMESHA SAVE KARKE RAKHNA😁😋</p></article>
+        <article class="photo-card"><div class="photo-placeholder" data-photo="5" style="background-image:url('photo5.jpg');background-size:cover;background-position:center;color:transparent;">PHOTO 05</div><p>ISME TOH MADAM KA APNA HEE SWAG HAI 💗 🤭</p></article>
+        <article class="photo-card"><div class="photo-placeholder" data-photo="6" style="background-image:url('photo6.jpg');background-size:cover;background-position:center;color:transparent;">PHOTO 06</div><p>ISME TOH EKDM CHAAND LAGRHI HAI CHAAND 💗🤭🧿</p></article>
+      </div>
+      <button onclick="nextPage()">NEXT SURPRISE 💌</button>
+    </section>
+
+    <section class="page wide" id="page6">
+      <div class="section-head">
+        <span class="eyebrow">06 — KAJUKATLI KE BAARE MEIN</span>
+        <h1>Kuch baatein… 🫶</h1>
+      </div>
+      <div class="reasons">
+        <div class="reason" onclick="this.classList.toggle('open')"><b>Teri sabse dangerous ability</b><span>bina kuch kiye mood theek kar dena 🤭😋</span></div>
+        <div class="reason" onclick="this.classList.toggle('open')"><b>Teri dosti</b><span>honestly kaafi special hai 🫶</span></div>
+        <div class="reason" onclick="this.classList.toggle('open')"><b>Favourite irritating person 😭</b><span>Kabhi kabhi tu irritating hai… par meri favourite irritating person hai 😭</span></div>
+        <div class="reason" onclick="this.classList.toggle('open')"><b>Jealous wala scene 🤭</b><span>Kabhi kabhi tu jealous feel krwa deti h😭... Par baad me apni pyaari pyaari baaton se sab bhula deti h 🤭🌷</span></div>
+      </div>
+      <button onclick="startCelebration()">B'DAY CELEBRATION 🎂</button>
+    </section>
+
+    <section class="page cake-page" id="page7">
+      <div class="cake-wrap">
+        <span class="eyebrow">07 — BIRTHDAY CAKE</span>
+        <h1>HAPPY BIRTHDAY, KAJUKATLI 🎂</h1>
+        <p>Chal pgli , candles bujha aur wish maang ✨</p>
+        <div class="cake" onclick="blowCandles()">
+          <div class="flame"></div><div class="candle"></div>
+          <div class="icing"></div><div class="cake-body"></div><div class="plate"></div>
+        </div>
+        <p class="tap">Tap the cake ✨</p>
+        <button id="cakeBtn" onclick="nextPage()">LETTER KHOLO 💌</button>
+      </div>
+    </section>
+
+    <section class="page" id="page8">
+      <div class="card letter-card">
+        <span class="eyebrow">08 — A LITTLE LETTER 💌</span>
+        <h1>For KAJUKATLI 🩷</h1>
+        <div id="letter"></div>
+        <button onclick="nextPage()">ONE LAST SURPRISE ✨</button>
+      </div>
+    </section>
+
+    <section class="page final-page" id="page9">
+      <div class="final-content">
+        <div class="glow-dot"></div>
+        <h1>HAPPIESTTT BIRTHDAYYY<br><span>KAJUKATLI 🩷</span></h1>
+        <p>Bas aise hi hamesha haste rehna,<br>Bakchodi karti rehna,<br>aur haan… mujhe bhoolna mat. 🤭🫶</p>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+  </html>
+  
